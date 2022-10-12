@@ -15,8 +15,15 @@ state_id_map = {}
 for feature in geo_dep['features']:
  feature['id'] = feature['properties']['code']
  state_id_map[feature['properties']['nom']] = feature['id']
-st.title('Tutoriel Streamlit')
-st.header('Créer un dashboard de visualisations spatiales avec Streamlit et Plotly ')
+
+
+t1, t2 = st.columns((0.05,0.2)) 
+
+
+t1.image('./data/iiidata.png', width = 120)
+t2.title('Tutoriel Streamlit')
+
+st.header('Dashboard de visualisations spatiales')
 viz, comparatif = st.tabs(['Visualiser les indicateurs', 'Comparer les indicateurs entre départements'])
 with viz : 
     # La selectbox prend en paramètres des Dataframe alors ne nous privons pas ! 
