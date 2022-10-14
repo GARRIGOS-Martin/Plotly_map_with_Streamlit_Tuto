@@ -10,6 +10,7 @@ df = pd.read_csv('./data/data_tuto_streamlit.csv', sep = ';')
 with urlopen('https://france-geojson.gregoiredavid.fr/repo/departements.geojson') as f : 
     geo_dep = json.load(f)
 
+
 # On s'embête pas avec ça, retenir que c'est primordial c'est déjà bien.
 state_id_map = {}
 for feature in geo_dep['features']:
